@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>.::InterNexa::.</title>
+    <link rel="icon" href="https://www.internexa.com/favicon.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif !important;
+        }
+    </style>
+    <div class="container-fluid" style="margin-bottom:50px;">
+        <div class="row">
+            <div class="col-12" style="padding-top:10px;padding-bottom:30px;background:#004F9A;">
+                <div class="text-center">
+                    <img src="https://www.internexa.com/assets/images/logo-rgb.png" alt="">
+                </div>
+                <h1 class="text-center" style="color:#ffffff;margin:0px;">
+                    Obrigado pela sua resposta!
+                </h1>
+            </div>
+        </div>
+        <div class="row justify-content-center" style="margin-top:20px;">
+            <div class="col-xs-12 col-sm-9 col-lg-6">
+                <p class="text-center" style="font-size:22px;font-weight:bold;">
+                    Lembre-se de que na InterNexa, temos uma equipe de especialistas pronta para acompanhá-lo nesta nova etapa do seu negócio.
+                </p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-xs-12 col-sm-9 col-lg-6">
+                <p class="text-left">
+                    Preencha seus dados para que um consultor possa entrar em contato com você o mais rápido possível.
+                </p>
+                <form action="https://internexa-mql.herokuapp.com/thank-you/" method="post">
+                    <div class="form-group">
+                        <label for="email1">E-mail</label>
+                        <input type="email1" class="form-control" id="email1" name="email1" value="{{email}}" disabled>
+                        <input style="display:none;" type="email" class="form-control" id="email" name="email" value="{{email}}">
+                        <input style="display:none;" type="text" class="form-control" id="name" name="name" value="{{name}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Companhia</label>
+                        <input type="text" class="form-control" id="company" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefone/Celular</label>
+                        <input type="number" class="form-control" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="descripcionAsesoria">Diga-nos como podemos ajudá-lo</label>
+                        <textarea class="form-control" id="descripcionAsesoria" name="descripcionAsesoria" rows="3" style="resize:none;" maxlength="250"></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="background:#004F9A;color:#ffffff;">Aceitar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
